@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'Bebas N';
+    src: url('../Fonts/Bebas_Neue/BebasNeue-Regular.ttf')format("woff");
+}
+@font-face {
+    font-family: 'Mont-R';
+    src: url('../Fonts/Montserrat/Montserrat-Regular.woff2')format("woff");
+}
+@font-face {
+    font-family: 'Mont-B';
+    src: url('../Fonts/Montserrat/Montserrat-Bold.ttf')format("woff");
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0A0501;
+        height: 900px;
+        width: 1440px;
+
+    background-image: url(../Images/Degrade.svg);
+    background-repeat: no-repeat;
+
+}
+
+#header{
+    background-color: #FFFFFF;
+    height: 10%;
+    display: flex;
+    padding: 0 10%;
+}
+
+.nav{
+    position: relative;
+    margin: auto;
+    width: 100%;
+
+
+    display: flex;
+    justify-content: center;
+    gap: 23%;
+
+}
+.nav__element{
+    color: #0A0501;
+    text-decoration: none;
+    font-family: 'Mont-B';
+}
+
+#main{
+    height: 80%;
+    padding: 0 10%;
+    color: #FFFFFF;
+
+
+    display: grid;
+    grid-template-areas:
+        "section-1 section-1"
+        "section-2 section-2";
+
+    grid-template-rows: 1fr 1fr; /* Altura fija para las filas */
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+}
+
+.section-1{
+    grid-area: section-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+    padding: 0 4.5%;
+
+}
+
+.article-1{
+    width: 165px;
+    height: 156px;
+
+}
+
+.article-1__text{
+    position: relative;
+    left: 0;
+    font-family: 'Bebas N';
+    font-size: 45px;
+    text-align: center;
+}
+
+.article-2{
+    height: 156px;
+    width: 410px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30%;
+
+}
+
+.article-2__text{
+    font-family: 'Mont-B';
+    font-size: 16px;
+}
+
+.article-2__input{
+    background-color: transparent;
+    border: none;
+    border-bottom: #FFFFFF 2px solid;
+
+    font-family: 'Mont-R';
+    height: 60px;
+    padding: 0 5%;
+
+    color: #FFFFFF;
+
+    &::placeholder{
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+}
+
+.section-2{
+    grid-area: section-2;
+    height: auto;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Opcional: evita que el contenido desborde */
+}
+
+.section-2__title{
+    font-family: 'Bebas N';
+    font-size: 380px;
+}
+
+
+#footer{
+    height: 10%;
+    border-top: 2px #ffffff5c dashed;
+  
+
+    display: flex;
+
+    padding: 0 8%;
+
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.info{
+    width: 862px;
+    display: flex;
+    justify-content:space-between;
+    
+}
+.social{
+    width: 181px;
+    display: flex;
+    justify-content:space-between;
+
+    gap: 10%;
+
+}
+
+
+
+.option{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Mont-R';
+    font-size: 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.social__option{
+    width: auto;
+}
+
+
+@media screen and (min-width:1441px){
+    body{
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+
+    }
+
+
+    .info{
+        width: 70%;
+
+    }
+
+
+    .social{
+        width: 30%;
+        display: flex;
+        justify-content:flex-end;
+    
+    }
+    .section-1{
+        padding: 0 9.5%;
+    }
+    .section-2{
+        height: 390px;
+    }
+    .section-2__title{
+        font-size: 450px;
+    }
+}
+
+
+
+
+
