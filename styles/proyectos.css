@@ -19,11 +19,14 @@
     box-sizing: border-box;
 }
 
+*::-webkit-scrollbar{
+    display: none;
+}
+
 body{
     background-color: #0A0501;
-        height: 900px;
-        width: 1440px;
-
+    height: 900px;
+    width: 1440px;
     background-image: url(../Images/Degrade.svg);
     background-repeat: no-repeat;
 
@@ -61,8 +64,8 @@ body{
 
     display: grid;
     grid-template-areas:
-        "section-1 section-2"
-        "section-1 section-2"
+        "section-1 section-1"
+        "section-1 section-1"
         "section-3 section-3";
 
     grid-template-rows: 1fr 1fr; /* Altura fija para las filas */
@@ -70,94 +73,115 @@ body{
 
 }
 
-.section-1{
+
+/* ------------------------------------CARRUSEL------------------------------------------ */
+
+#section-1{
     grid-area: section-1;
-    background-color: #0A0501;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10% 0;
+    align-items: center;
+}
+
+.carrusel{
+    /* background-color: aqua;  */
+    width: 20%;
+    height: 85vh;
 
 }
 
-/* .category{
-    height: 100%;
-
+.contenido{
+    height: 90%;
+    width: 300%;
+    /* background-color: white; */
 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: column;
 
-
+    transition: all ease 0.5s;
 }
 
-.category__element{
-    color: #FFFFFF;
-    font-family: 'Bebas N';
-    text-decoration: none;
-    font-size: 89px;
+
+.contenido__poster{
+    height: 400px;
+    filter: blur(2px);
+    position: relative;
+    margin: -100px;
+
+    &:nth-child(1){
+        z-index: 100;
+    }
+    &:nth-child(2){
+        z-index: 110;
+    }
+    &:nth-child(3){
+        z-index: 90;
+    }
 }
 
-.category__element--actived{
-    border-top: solid 2px #FFFFFF;
-    border-bottom: solid 2px #FFFFFF;
-} */
 
-
-.section-2{
-    grid-area: section-2;
-    height: auto;
-    width: auto;
-
+.contenido__poster.activo{
+    height: 500px;
+    filter: blur(0);
+    transition: all 0.3s ease-in;
+    z-index: 120;
+}
+.controls{
+    /* background-color: bisque; */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Opcional: evita que el contenido desborde */
-    padding: 10% 0;
+    gap: 10px;
+}
+.controls__left{
+    background-image: url(../Icons/Arrow\ Left.svg);
+    &:active{
+        background-image: url(../Icons/Arrow\ Left\ 2.svg);
+    }
+
 }
 
-.proyects{
-    background-color: #0a050182;
-    height: 100%;
-    width: 614px;
-    padding: 5%;
-    overflow: auto;
+.controls__right{
+    background-image: url(../Icons/Arrow\ Right.svg);
 
-    &::-webkit-scrollbar {
-        width: 5px; 
-        height: 12px;
+    &:active{
+        background-image: url(../Icons/Arrow\ Right\ 2.svg);
     }
-    &::-webkit-scrollbar-thumb {
-        background: #271609; /* Color del pulgar (thumb) */
-        border-radius: 15px; /* Bordes redondeados */
-    }
-    &::-webkit-scrollbar-thumb:hover {
-        background: #0a0501; /* Color al pasar el mouse */
-    }
-    &::-webkit-scrollbar-track {
-        background: #f1f1f1d3; /* Color de la pista */
-        border-radius: 15px;
-    }
+
 }
 
-.proyects__list{
-    height: 100%;
+.controls__left, .controls__right{
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: end;
-    gap: 5%;
-    
-
-
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
 }
 
-.list__item{
-    font-family: 'Mont-R';
-    font-size: 34px;
+
+
+
+ 
+.controls__point{
+    background-color: #999999;
+    height: 0.6em;
+    width: 0.6em;
+    border-radius: 50%;
 }
 
+.controls__point.activo{
+    background-color: #b7ff1c;
+    height: 0.8em;
+    width: 0.8em;
+}
+
+
+/*-------------------------------------------------------------------------------*/
 
 .category{
     display: flex;
@@ -173,11 +197,6 @@ body{
     text-decoration: none;
     font-size: 30px;
 }
-
-/* .category__element--actived{
-    border-top: solid 2px #FFFFFF;
-    border-bottom: solid 2px #FFFFFF;
-} */
 
 .category__element:hover{
     border-top: solid 2px #FFFFFF;
@@ -236,6 +255,10 @@ body{
 }
 
 
+
+/*----------------------PANTALLAS FHD----------------------------------*/
+
+
 @media screen and (min-width:1441px){
     body{
         
@@ -259,9 +282,116 @@ body{
     
     }
 
+
+
+
+    /* CARRUSEL */
+
+    #section-1{
+        grid-area: section-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .carrusel{
+        /* background-color: aqua;  */
+        width: 20%;
+        height: 85vh;
+    
+    }
+    
+    .contenido{
+        height: 90%;
+        width: 300%;
+        /* background-color: white; */
+    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        transition: all ease 0.5s;
+    }
+    
+    
+    .contenido__poster{
+        height: 400px;
+        filter: blur(2px);
+        position: relative;
+        margin: -100px;
+    
+        &:nth-child(1){
+            z-index: 100;
+        }
+        &:nth-child(2){
+            z-index: 110;
+        }
+        &:nth-child(3){
+            z-index: 90;
+        }
+    }
+    
+    
+    .contenido__poster.activo{
+        height: 600px;
+        filter: blur(0);
+        transition: all 0.3s ease-in;
+        z-index: 120;
+    }
+    .controls{
+        /* background-color: bisque; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .left{
+        background-image: url(../Icons/Arrow\ Left.svg);
+        &:active{
+            background-image: url(../Icons/Arrow\ Left\ 2.svg);
+        }
+    
+    }
+    
+    .right{
+        background-image: url(../Icons/Arrow\ Right.svg);
+    
+        &:active{
+            background-image: url(../Icons/Arrow\ Right\ 2.svg);
+        }
+    
+    }
+    
+    .left, .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        border: none;
+        background-color: transparent;
+        background-size: contain;
+        height: 30px;
+        width: 30px;
+    }
+    
+    
+    
+    
+     
+    .point{
+        background-color: #999999;
+        height: 0.6em;
+        width: 0.6em;
+        border-radius: 50%;
+    }
+    
+    .point.activo{
+        background-color: #b7ff1c;
+        height: 0.8em;
+        width: 0.8em;
+    }
+    
+
 }
-
-
-
 
 

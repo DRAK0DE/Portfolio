@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
 
     <script defer src="scripts/watch.js"></script>
+    <script defer src="scripts/carrusel.js"></script>
+
     <title>Portafolio Drakode</title>
 </head>
 <body>
@@ -19,12 +21,12 @@
     </header>
     <main id="main">
 
-        <div class="main__section section-1">
-            <!-- <article class="section-1__article category">
+        <!-- <div class="main__section section-1">
+            <article class="section-1__article category">
                 <a href="#" class="category__element category__element--actived">Diseño Web</a>
                 <a href="#" class="category__element">Diseño gráfico</a>
                 <a href="#" class="category__element">Modelado 3d</a>
-            </article> -->
+            </article> 
         </div>
 
         <section class="main__section section-2">
@@ -47,7 +49,34 @@
                 </ul>
 
             </article>
-        </section>
+        </section> -->
+        
+        
+        <div id="section-1" >
+
+            <div class="section-1__carrusel carrusel">
+                <div class="carrusel__contenido contenido">
+                    <img class="contenido__poster activo" src="Images/HERESY POSTER 1.png">
+                    <img class="contenido__poster " src="Images/HERESY POSTER 2.png">
+                    <img  class="contenido__poster" src="Images/IRREVERENT.png">
+                </div>
+    
+                <div class="section-1__controls controls">
+    
+                    <button class="controls__left"></button>
+    
+                    <div class="controls__point activo"></div>
+                    <div class="controls__point"></div>
+                    <div class="controls__point"></div>
+                    
+                    <button class="controls__right"></button>
+    
+                </div>
+            </div>
+            
+        </div>
+
+
         <section class="main__section section-3">
             <article class="section-2__article category">
                 <a href="#" class="category__element category__element--actived">Diseño Web</a>
