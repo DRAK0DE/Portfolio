@@ -64,29 +64,105 @@ body{
 #main{
 
     height: 80%;
-    /* padding: 0 10%; */
     color: #FFFFFF;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    padding: 0 8%;
+    
+}
+
+.main__title{
+    font-size: 50px;
+}
+
+.main__info{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    
+}
+
+.info__part-1, .info__part-3{
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+}
+.info__part-3{
+    justify-content: center;
+    gap: 10%;
+}
+
+.part-1__text,.part-3__text{
+    width: 300px;
+    text-align: center;
+}
+
+
+
+.info__part-2{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.part-2__line{
+    display: block;
+    height: 5px;
+    background-color: #f7f7f7;
+    width: 80%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.part-2__point{
+    width: 96%;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+.point__circle{
+    display: block;
+    height: 20px;
+    background-color: #ffffff;
+    width: 20px;
+    border-radius: 10px;
+    
+}
 
-.content{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
 
+.part-1__text{
+        position: relative;
+        
+        &:first-child{
+            right: 7%;
+        }
+        &:last-child{
+            left: 8%;
+        }
 
 }
 
-.content__project{
-    max-width: 302px;
-    min-height: 193px;
-
+.part-3__text{
+    position: relative;
+    
+    &:first-child{
+        right: 6%;
+    }
+    &:last-child{
+        left: 6%;
+    }
 
 }
+
+
+
 
 /*-----------------------------------------FOOTER-----------------------------------------*/
 
@@ -135,31 +211,23 @@ body{
         width: 100vw;
 
     }
-
-
     .info{
         width: 70%;
-
     }
-
-
     .social{
         width: 30%;
         display: flex;
         justify-content:flex-end;
-
     }
     .section-1{
-
         width: 65%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1%;
-    
     }
-    
+
     .section-2{
         width: 35%;
         background-color: rgb(193, 141, 72);
@@ -167,19 +235,20 @@ body{
         align-items: end;
     }
 
-
-
-
-
-    .content__project{
-        max-width: 302px;
-        min-height: 193px;
-        background-color: aquamarine;
     
-    
+
+    .part-3__text{
+        position: relative;
+        
+        &:first-child{
+            right: 10%;
+        }
+        &:last-child{
+            left: 10%;
+        }
+
     }
-
-} 
+}
 
 
 

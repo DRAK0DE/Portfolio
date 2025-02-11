@@ -71,22 +71,42 @@ body{
     align-items: center;
 }
 
-
-.content{
+.main__grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    min-height: 483px;
+    min-width: 1062px;
 
+}
+
+.grid__item{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.item__ability{
+    border: solid white 4px;
+    border-radius: 15px;
+    display: flex;
+    padding: 5%;
+}
+
+.ability__img{
+    width: 125px;
+    width: 125px;
 
 }
 
-.content__project{
-    max-width: 302px;
-    min-height: 193px;
-
-
+.item__title{
+    color: #FFFFFF;
+    font-family: "Mont-B";
 }
+
+
 
 /*-----------------------------------------FOOTER-----------------------------------------*/
 
@@ -157,9 +177,9 @@ body{
         justify-content: center;
         align-items: center;
         gap: 1%;
-    
+
     }
-    
+
     .section-2{
         width: 35%;
         background-color: rgb(193, 141, 72);
@@ -167,19 +187,7 @@ body{
         align-items: end;
     }
 
-
-
-
-
-    .content__project{
-        max-width: 302px;
-        min-height: 193px;
-        background-color: aquamarine;
-    
-    
-    }
-
-} 
+}
 
 
 
