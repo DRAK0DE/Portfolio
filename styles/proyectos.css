@@ -84,8 +84,31 @@ body{
 .content__project{
     max-width: 302px;
     min-height: 193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+
+.content__project:hover .project__tools{
+    opacity: 1;
+}
+
+.project__tools{
+    opacity: 0;
+    position: absolute;
+   
+   
+} 
+/*Deja ver las herramientas que se usaron para el proyecto*/
+.content__project:hover .project__tools{
+    opacity: 1;
+    background-color: #1C2246;
+    min-width: 302px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 /*-----------------------------------------FOOTER-----------------------------------------*/
@@ -112,7 +135,6 @@ body{
     display: flex;
     justify-content:space-between;
     gap: 10%;
-
 }
 
 .option{
@@ -121,7 +143,6 @@ body{
     font-size: 15px;
     width: 160px;
     text-align: center;
-
 }
 
 .social__option{
