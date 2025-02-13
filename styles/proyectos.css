@@ -6,11 +6,13 @@
 }
 
 
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
+ 
 }
 
 body{
@@ -90,25 +92,48 @@ body{
 }
 
 
+/* .project__veil{
+    width: 302px;
+    height: 198px;
+    position: absolute;
+    background-color: rgb(2, 2, 2);
+    opacity: 0;
+    transition: all ease-in-out 1s;
 
-.content__project:hover .project__tools{
-    opacity: 1;
 }
+.content__project:hover .project__veil{
+    opacity: 0.5;
+
+} */
+
+.content__project:hover .project__item{
+    filter: blur(2px);
+    transition: all 0.3s ;
+}
+
+
+/* .project__item{
+    filter: blur(10px);
+} */
 
 .project__tools{
     opacity: 0;
     position: absolute;
-   
-   
+    display: flex;
+    gap: 2%;
+    transition: all 0.5s;
+    justify-content: center;
 } 
 /*Deja ver las herramientas que se usaron para el proyecto*/
 .content__project:hover .project__tools{
     opacity: 1;
-    background-color: #1C2246;
-    min-width: 302px;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
+    
+    
+}
+
+
+.tools__logo{
+    height: 55px;
 }
 
 /*-----------------------------------------FOOTER-----------------------------------------*/
