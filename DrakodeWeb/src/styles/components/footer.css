@@ -1,0 +1,38 @@
+
+
+#footer{
+    height: 10%;
+    border-top: 2px #ffffff5c solid;
+    display: flex;
+    padding: 0 8%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.info{
+    width: 862px;
+    display: flex;
+    justify-content:space-between;
+
+}
+.social{
+    width: 181px;
+    display: flex;
+    justify-content:space-between;
+    gap: 10%;
+
+}
+
+.option{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    width: 160px;
+    text-align: center;
+
+}
+
+.social__option{
+    width: auto;
+}
